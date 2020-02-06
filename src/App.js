@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
-import Header from './components/Header';
+import {Route} from 'react-router-dom'
+import Header from './components/Header/Header';
+import MeetupSelection from './components/MeetupSection/MeetupSection'
+import LaunchPage from './components/LaunchPage/LaunchPage'
+import NewMeeting from './components/NewMeeting/NewMeeting'
+import DoorCounter from './components/DoorCounter/DoorCounter'
+import IntroCounter from './components/IntroCounter/IntroCounter'
+import StatsPage from './components/StatsPage/StatsPage'
 import './App.css';
 
 class App extends Component {
@@ -16,7 +23,7 @@ class App extends Component {
           />
         ))}
         <Route path='/launch' component={LaunchPage}/>
-        <Route path='/newEvent' component={NewEvent}/>
+        <Route path='/newMeeting' component={NewMeeting}/>
         <Route path='/doorCount' component={DoorCounter}/>
         <Route path='/introCount' component={IntroCounter}/>
         <Route path='/stats' component={StatsPage}/>
