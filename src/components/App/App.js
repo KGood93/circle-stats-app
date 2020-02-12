@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 import {Route} from 'react-router-dom'
-import Header from './components/Header/Header';
-import MeetupSelection from './components/MeetupSection/MeetupSection'
-import LaunchPage from './components/LaunchPage/LaunchPage'
-import NewMeeting from './components/NewMeeting/NewMeeting'
-import DoorCounter from './components/DoorCounter/DoorCounter'
-import IntroCounter from './components/IntroCounter/IntroCounter'
-import StatsPage from './components/StatsPage/StatsPage'
+import Header from '../Header/Header';
+import MeetupSelection from '../MeetupSection/MeetupSection'
+import LaunchPage from '../LaunchPage/LaunchPage'
+import NewMeeting from '../NewMeeting/NewMeeting'
+import DoorCounter from '../DoorCounter/DoorCounter'
+import IntroCounter from '../IntroCounter/IntroCounter'
+import StatsPage from '../StatsPage/StatsPage'
 import './App.css';
+import {createStore} from 'redux'
+import {Provider} from 'react-redux'
+import reducers from '../../reducers/index'
+
+const store = createStore(reducers)
 
 class App extends Component {
 
@@ -33,6 +38,7 @@ class App extends Component {
 
   render() {
     return(
+      <Provider store={store}>
       <div className="App">
         <header>
           <Header />
@@ -44,6 +50,7 @@ class App extends Component {
           <p>Important Info</p>
         </footer>
       </div>
+      </Provider>
     );
   }
 }

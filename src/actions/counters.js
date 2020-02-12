@@ -1,14 +1,19 @@
-export const increment = (id) => {
+//Actions {types}
+export const INCREMENT = 'INCREMENT'
+export const DECREMENT = 'DECREMENT'
+
+//Action creators
+export const incrementCount = (index) => {
     return {
-        type: "INCREMENT",
-        id
+        type: INCREMENT,
+        payload: {index}
     }
 }
 
-export const decrement = (id) => {
+export const decrementCount = (index) => {
     return {
-        type: "DECREMENT",
-        id
+        type: DECREMENT,
+        payload: {index}
     }
 }
 
