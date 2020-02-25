@@ -3,16 +3,14 @@ import {Route} from 'react-router-dom'
 import Header from '../Header/Header';
 import MeetupSelection from '../MeetupSection/MeetupSection'
 import LaunchPage from '../LaunchPage/LaunchPage'
-import NewMeeting from '../NewMeeting/NewMeeting'
 import DoorCounter from '../DoorCounter/DoorCounter'
-import IntroCounter from '../IntroCounter/IntroCounter'
 import StatsPage from '../StatsPage/StatsPage'
 import './App.css';
-import {createStore} from 'redux'
-import {Provider} from 'react-redux'
-import reducers from '../../reducers/index'
+//import {createStore} from 'redux'
+//import {Provider} from 'react-redux'
+//import reducers from '../../SecondRelease/reducers/index'
 
-const store = createStore(reducers)
+//const store = createStore(reducers)
 
 class App extends Component {
 
@@ -28,9 +26,7 @@ class App extends Component {
           />
         ))}
         <Route path='/launch' component={LaunchPage}/>
-        <Route path='/newMeeting' component={NewMeeting}/>
         <Route path='/doorCount' component={DoorCounter}/>
-        <Route path='/introCount' component={IntroCounter}/>
         <Route path='/stats' component={StatsPage}/>
       </>
     )
@@ -38,7 +34,6 @@ class App extends Component {
 
   render() {
     return(
-      <Provider store={store}>
       <div className="App">
         <header>
           <Header />
@@ -50,7 +45,6 @@ class App extends Component {
           <p>Important Info</p>
         </footer>
       </div>
-      </Provider>
     );
   }
 }
