@@ -1,31 +1,15 @@
 import React, { PureComponent } from 'react';
-import {
-  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
-} from 'recharts';
+import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip} from 'recharts';
+import '../STORE.js'
 
 const data = [
-  {
-    name: 'Jan', attendees: 32,
-  },
-  {
-    name: 'Feb', attendees: 40,
-  },
-  {
-    name: 'Mar', attendees: 63,
-  },
-  {
-    name: 'Apr', attendees: 54,
-  },
-  {
-    name: 'May', attendees: 28,
-  },
-  {
-    name: 'Jun', attendees: 45,
-  },
-  {
-    name: 'Jul', attendees: 36,
-    
-  },
+    { month: 'Jan', location: 'Rainbows End Alpacas', attendees: 32,},
+    { month: 'Feb', location: 'The Loop', attendees: 40,},
+    { month: 'Mar', location: 'Cream City Yarns', attendees: 63,},
+    { month: 'Apr', location: 'Knitting Knook', attendees: 54,},
+    { month: 'May', location: 'Fiberwood Studio', attendees: 28,},
+    { month: 'Jun', location: 'Grafton Yarn Store', attendees: 45,},
+    { month: 'Jul', location: 'Starstruck Cat Yarn Studio', attendees: 36,},
 ];
 
 export default class Graph extends PureComponent {
@@ -42,8 +26,8 @@ export default class Graph extends PureComponent {
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
+        <XAxis dataKey="month" />
+        <YAxis dataKey="attendees"/>
         <Tooltip />
         <Line type="monotone" dataKey="attendees" stroke="#8884d8" activeDot={{ r: 8 }} />
       </LineChart>

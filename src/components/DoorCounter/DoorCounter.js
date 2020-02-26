@@ -37,6 +37,8 @@ class DoorCounter extends Component {
         }
 
         console.log(meetingDetails)
+
+        //API Post
     }
 
     render() {

@@ -6,11 +6,6 @@ import LaunchPage from '../LaunchPage/LaunchPage'
 import DoorCounter from '../DoorCounter/DoorCounter'
 import StatsPage from '../StatsPage/StatsPage'
 import './App.css';
-//import {createStore} from 'redux'
-//import {Provider} from 'react-redux'
-//import reducers from '../../SecondRelease/reducers/index'
-
-//const store = createStore(reducers)
 
 class App extends Component {
 
