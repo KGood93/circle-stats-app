@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import StatsForm from '../StatsForm/StatsForm'
+import {Link} from 'react-router-dom'
 
 class DoorCounter extends Component {
     constructor(props) {
@@ -72,6 +73,8 @@ class DoorCounter extends Component {
                     </div>
                 </div>
                 </StatsForm>
+
+                <Link to={'/stats'}>Temporary Link to Stats Page</Link>
             </div>
         )
     }

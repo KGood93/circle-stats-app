@@ -12,7 +12,7 @@ class LaunchPage extends Component {
                     <h2 class="launchHead">attendees!</h2>   
                 </div>
                 <div class="launchButtons">
-                    <button type="button" class="mainButton"><Link to={'/newMeeting'}>Create New</Link></button>
+                    <button type="button" class="mainButton"><Link to={'/doorCount'}>Create New</Link></button>
                     <br/>
                     <button type="button" class="mainButton"><Link to={'/stats'}>View Stats</Link></button>
                 </div>
