@@ -25,14 +25,15 @@ class DoorCounter extends Component {
 
     handleSubmit = event => {
         event.preventDefault()
+        console.log(this.state)
         const {location, clicks} = this.state
-        console.log(location.value)
-        console.log(clicks.value)
+        console.log(location)
+        console.log(clicks)
 
         const meetingDetails = {
             //date: date.value,
             location: location.value,
-            count: clicks.value
+            count: clicks
         }
 
         console.log(meetingDetails)
