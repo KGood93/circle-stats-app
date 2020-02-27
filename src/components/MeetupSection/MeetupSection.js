@@ -6,13 +6,13 @@ function MeetupSelection() {
 
     return (
         <div className="MeetupSection">
-            <div class="meetupDiv">
-                <h2 class="meetupTitle"><Link to={'/launch'}>Meetup East</Link></h2>
-                <h4 class="meetupDate">1st Weekend of the Month</h4>
+            <div className="meetupDiv">
+                <h2 className="meetupTitle"><Link to={'/launch'}>Meetup East</Link></h2>
+                <h4 className="meetupDate">1st Weekend of the Month</h4>
             </div>
-            <div class="meetupDiv">
-                <h2 class="meetupTitle"><Link to={'/launch'}>Meetup West</Link></h2>
-                <h4 class="meetupDate">3rd Weekend of the Month</h4>
+            <div className="meetupDiv">
+                <h2 className="meetupTitle"><Link to={'/launch'}>Meetup West</Link></h2>
+                <h4 className="meetupDate">3rd Weekend of the Month</h4>
             </div>
         </div>
     )
