@@ -9,7 +9,7 @@ class StatsPage extends Component {
     render() {
         return (
             <div className="StatsPage">
-                <div class="graph">
+                <div className="graph">
                     <Graph />
                 </div>
                 <div className="textStats">

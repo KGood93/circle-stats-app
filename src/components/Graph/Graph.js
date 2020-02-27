@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip} from 'recharts';
-import '../STORE.js'
 
 const data = [
     { month: 'Jan', location: 'Rainbows End Alpacas', attendees: 32,},
