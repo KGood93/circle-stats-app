@@ -2,14 +2,16 @@ import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import Context from '../../context'
 
+//Add meet_id capabilities
+
 class LaunchPage extends Component {
     static contextType = Context
 
     renderLastMessage() {
         const {stats = []} = this.context
         const stat = stats
-        console.log(stat)
-        console.log(stat[0].meet_id)
+        //console.log(stat)
+        //console.log(stat[0].meet_id)
         const meetupId = 1  //Get id from query
         
         const meetStat = []

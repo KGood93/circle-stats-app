@@ -1,6 +1,9 @@
 import React, {Component} from 'react'
 import StatsForm from '../StatsForm/StatsForm'
-import {Link} from 'react-router-dom'
+import {Redirect} from 'react-router-dom'
+import config from '../../config'
+
+//Add meet_id capabilities
 
 class DoorCounter extends Component {
     constructor(props) {
@@ -32,14 +35,26 @@ class DoorCounter extends Component {
         //console.log(clicks)
 
         const meetingDetails = {
-            //date: date.value,
+            meet_id: 1, //add different ids from meetup selection
             location: location.value,
-            count: clicks
+            at_count: clicks
         }
 
-        console.log(meetingDetails)
+        //console.log(meetingDetails)
 
-        //API Post
+        fetch(`${config.API_ENDPOINT}/stats`, {
+            method: 'POST',
+            headers: {
+                'Content-Type':'application/json'
+            },
+            body: JSON.stringify(meetingDetails)
+        })
+        .then(
+            this.setState({redirect: true})
+        )
+        .catch(error => {
+            console.log({error})
+        })
     }
 
     render() {
@@ -73,8 +88,7 @@ class DoorCounter extends Component {
                     </div>
                 </div>
                 </StatsForm>
-
-                <Link to={'/stats'}>Temporary Link to Stats Page</Link>
+                {this.state.redirect && <Redirect to={'/stats'}/>}
             </div>
         )
     }
