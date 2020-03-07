@@ -9,7 +9,8 @@ class StatsPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            stats: []
+            stats: [],
+            data: []
         }
     }
 
@@ -36,8 +37,9 @@ class StatsPage extends Component {
             }
           })
           .then(data => {
-            //console.log(data)
+            console.log(data)
             this.setState({stats: data})
+            this.renderData()
           })
           .catch(err => {
             this.setState({
@@ -46,22 +48,41 @@ class StatsPage extends Component {
           })
       }
 
-    render() {
-        const value = {
-            stats: this.state.stats
+      renderData() {
+        //const {stats=[]} = this.state.stats
+        console.log(this.state.stats)
+        const newData = this.state.stats
+        const meetupId = 1 // Get id from query
+
+        console.log(newData)
+        const meetStat = []
+
+        for(var i = 0; i < newData.length; i++){
+            if(newData[i].meet_id === meetupId) {
+                meetStat.push(newData[i])
+            }
         }
 
+        console.log(meetStat)
+        this.setState({data: meetStat})
+      }
+
+    render() {
+        const value = {
+            data: this.state.data
+        }
+
+        console.log(value)
+
         return (
-            <Context.Provider value={value}>
             <div className="StatsPage">
                 <div className="graph">
-                    <Graph />
+                    <Graph workingData={value}/>
                 </div>
                 <div className="textStats">
-                    <StatsTable />
+                    <StatsTable workingData={value}/>
                 </div>
             </div>
-            </Context.Provider>
         )
     }
 }

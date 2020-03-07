@@ -14,12 +14,18 @@ const data = [
 export default class Graph extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/xqjtetw0/';
 
+  renderData() {
+    const newData = this.props.workingData.data
+    console.log(newData)
+    return newData
+  }
+
   render() {
     return (
       <LineChart
         width={500}
         height={300}
-        data={data}
+        data={this.renderData()}
         margin={{
           top: 5, right: 30, left: 20, bottom: 5,
         }}
