@@ -23,9 +23,18 @@ class DoorCounter extends Component {
         this.setState({location: {value: meetingLocation, touched: true}})
     }
 
+    getMeetId() {
+        const {meet_id} = this.props.match.params
+        console.log(meet_id)
+        const id = parseInt(meet_id)
+        return id
+    }
+
     incrementCount = () => {
         this.setState({clicks: this.state.clicks + 1})
     }
+
+
 
     handleSubmit = event => {
         event.preventDefault()
@@ -33,14 +42,15 @@ class DoorCounter extends Component {
         const {location, clicks} = this.state
         //console.log(location)
         //console.log(clicks)
+        const meetingId = this.getMeetId()
 
         const meetingDetails = {
-            meet_id: 1, //add different ids from meetup selection
+            meet_id: meetingId,
             location: location.value,
             at_count: clicks
         }
 
-        //console.log(meetingDetails)
+        console.log(meetingDetails)
 
         fetch(`${config.API_ENDPOINT}/stats`, {
             method: 'POST',
@@ -88,7 +98,7 @@ class DoorCounter extends Component {
                     </div>
                 </div>
                 </StatsForm>
-                {this.state.redirect && <Redirect to={'/stats'}/>}
+                {this.state.redirect && <Redirect to={`/stats/${this.getMeetId()}`}/>}
             </div>
         )
     }

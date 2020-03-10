@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import Graph from '../Graph/Graph'
 import StatsTable from '../StatsTable/StatsTable'
 import config from '../../config'
-import Context from '../../context'
 import './StatsPage.css'
 
 class StatsPage extends Component {
@@ -17,6 +16,12 @@ class StatsPage extends Component {
     componentDidMount() {
         this.fetchStats()
     }
+
+    getMeetId() {
+      const {meet_id} = this.props.match.params
+      const id = parseInt(meet_id)
+      return id
+  }
 
     fetchStats() {
         const statsUrl = `${config.API_ENDPOINT}/stats`
@@ -37,7 +42,7 @@ class StatsPage extends Component {
             }
           })
           .then(data => {
-            console.log(data)
+            //console.log(data)
             this.setState({stats: data})
             this.renderData()
           })
@@ -50,11 +55,11 @@ class StatsPage extends Component {
 
       renderData() {
         //const {stats=[]} = this.state.stats
-        console.log(this.state.stats)
+        //console.log(this.state.stats)
         const newData = this.state.stats
-        const meetupId = 1 // Get id from query
+        const meetupId = this.getMeetId()
 
-        console.log(newData)
+        //console.log(newData)
         const meetStat = []
 
         for(var i = 0; i < newData.length; i++){
@@ -63,7 +68,7 @@ class StatsPage extends Component {
             }
         }
 
-        console.log(meetStat)
+        //console.log(meetStat)
         this.setState({data: meetStat})
       }
 
@@ -72,7 +77,7 @@ class StatsPage extends Component {
             data: this.state.data
         }
 
-        console.log(value)
+        //console.log(value)
 
         return (
             <div className="StatsPage">

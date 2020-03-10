@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 
 class StatsTable extends Component {
 
-
     renderTableHeader() {
         return (
             <tr>
@@ -27,7 +26,6 @@ class StatsTable extends Component {
     }
 
     render() {
-
         return (
             <div className="StatsTable">
                 <h3>Meetup Stats</h3>

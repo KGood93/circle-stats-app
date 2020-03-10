@@ -92,9 +92,9 @@ class App extends Component {
             component={MeetupSelection}
           />
         ))}
-        <Route path='/launch' component={LaunchPage}/>
-        <Route path='/doorCount' component={DoorCounter}/>
-        <Route path='/stats' component={StatsPage}/>
+        <Route path='/launch/:meet_id' component={LaunchPage}/>
+        <Route path='/doorCount/:meet_id' component={DoorCounter}/>
+        <Route path='/stats/:meet_id' component={StatsPage}/>
       </>
     )
   }

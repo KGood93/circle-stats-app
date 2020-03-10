@@ -2,40 +2,52 @@ import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import Context from '../../context'
 
-//Add meet_id capabilities
-
 class LaunchPage extends Component {
     static contextType = Context
+
+    getMeetId() {
+        const {meet_id} = this.props.match.params
+        const id = parseInt(meet_id)
+        return id
+    }
 
     renderLastMessage() {
         const {stats = []} = this.context
         const stat = stats
-        //console.log(stat)
-        //console.log(stat[0].meet_id)
-        const meetupId = 1  //Get id from query
-        
+        //const {meet_id} = this.props.match.params
+        //const id = parseInt(meet_id)
+
+        const meetupId = this.getMeetId()
+
         const meetStat = []
 
         for(var i = 0; i < stat.length; i++) {
             if(stat[i].meet_id === meetupId) {
                 meetStat.push(stat[i])
-                //console.log(meetStat)
             }
         }
 
-        let dataIndex = meetStat.length - 1
-        //console.log(dataIndex)
-        let meetup = meetStat[dataIndex]
-        //console.log(meetup)
-        //console.log(meetup.location)
+        if(meetStat.length === 0) {
+            return(
+                <div className="welcomeMessage">
+                    <h2 className="launchHead">This is your first meetup!</h2> 
+                </div>
+            )
+        }
+        else {
+            let dataIndex = meetStat.length - 1
+            //console.log(dataIndex)
+            let meetup = meetStat[dataIndex]
 
-        return(
-            <div className="welcomeMessage">
-                <h2 className="launchHead">Your last meetup at {meetup.location} had</h2>
-                <h2 className="launchHead">{meetup.at_count}</h2>  
-                <h2 className="launchHead">attendees!</h2> 
-            </div>
-        )
+            return(
+                <div className="welcomeMessage">
+                    <h2 className="launchHead">Your last meetup at {meetup.location} had</h2>
+                    <h2 className="launchHead">{meetup.at_count}</h2>  
+                    <h2 className="launchHead">attendees!</h2> 
+                </div>
+            )
+        }
+
     }
 
     render() {
@@ -43,9 +55,9 @@ class LaunchPage extends Component {
             <div className="LaunchPage">
                 {this.renderLastMessage()}
                 <div className="launchButtons">
-                    <button type="button" className="mainButton"><Link to={'/doorCount'}>Create New</Link></button>
+                    <button type="button" className="mainButton"><Link to={`/doorCount/${this.getMeetId()}`}>Create New</Link></button>
                     <br/>
-                    <button type="button" className="mainButton"><Link to={'/stats'}>View Stats</Link></button>
+                    <button type="button" className="mainButton"><Link to={`/stats/${this.getMeetId()}`}>View Stats</Link></button>
                 </div>
             </div>
         )
