@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
-import Context from '../../context'
+//import Context from '../../context'
+import config from '../../config'
 
 //Update at_count to attendance after change in API
 
