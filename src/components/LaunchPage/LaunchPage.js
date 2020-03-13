@@ -1,9 +1,6 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
-//import Context from '../../context'
 import config from '../../config'
-
-//Update at_count to attendance after change in API
 
 class LaunchPage extends Component {
     constructor(props) {
@@ -53,10 +50,9 @@ class LaunchPage extends Component {
     }
 
     renderLastMessage() {
-        const {stats = []} = this.state.stats
-        const stat = stats
-        //const {meet_id} = this.props.match.params
-        //const id = parseInt(meet_id)
+        //const {stats = []} = this.state.stats
+        const stat = this.state.stats
+        console.log(stat)
 
         const meetupId = this.getMeetId()
 
