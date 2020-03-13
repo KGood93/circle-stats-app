@@ -4,13 +4,12 @@ import { Link } from 'react-router-dom'
 import './Header.css'
 
 export default class Header extends Component {
-
-
+  
   render() {
     return (
       <nav className='Header'>
         <h1>
-          <Link to='/meetups' onClick={() => window.location.reload(false)}>
+          <Link to='/meetups'>
             {' '}
             Circle Time Stats
             </Link>
