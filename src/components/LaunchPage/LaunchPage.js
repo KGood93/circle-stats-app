@@ -50,9 +50,8 @@ class LaunchPage extends Component {
     }
 
     renderLastMessage() {
-        //const {stats = []} = this.state.stats
         const stat = this.state.stats
-        console.log(stat)
+        //console.log(stat)
 
         const meetupId = this.getMeetId()
 

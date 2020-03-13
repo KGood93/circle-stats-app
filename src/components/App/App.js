@@ -16,12 +16,10 @@ class App extends Component {
       meetups: [],
       stats: []
     };
-    this.fetchStats = this.fetchStats.bind(this)
   }
 
   componentDidMount() {
     this.fetchMeetups();
-    this.fetchStats();
   }
 
   fetchMeetups() {
@@ -45,35 +43,6 @@ class App extends Component {
       .then(data => {
         //console.log(data)
         this.setState({meetups: data})
-      })
-      .catch(err => {
-        this.setState({
-          error: err.message
-        })
-      })
-  }
-
-  fetchStats() {
-    const statsUrl = `${config.API_ENDPOINT}/stats`
-    const statsOptions = {
-      method: 'GET', 
-      headers: {
-        'Content-type': 'application/json'
-      }
-    }
-
-    fetch(statsUrl, statsOptions)
-      .then(res => {
-        if(res.ok) {
-          return res.json()
-        }
-        else {
-          throw new Error('Something went wrong loading stats')
-        }
-      })
-      .then(data => {
-        //console.log(data)
-        this.setState({stats: data})
       })
       .catch(err => {
         this.setState({

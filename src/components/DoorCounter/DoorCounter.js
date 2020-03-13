@@ -28,7 +28,7 @@ class DoorCounter extends Component {
 
     getMeetId() {
         const {meet_id} = this.props.match.params
-        console.log(meet_id)
+        //console.log(meet_id)
         const id = parseInt(meet_id)
         return id
     }
@@ -54,7 +54,7 @@ class DoorCounter extends Component {
             notes: notes.value
         }
 
-        console.log(meetingDetails)
+        //console.log(meetingDetails)
 
         fetch(`${config.API_ENDPOINT}/stats`, {
             method: 'POST',
