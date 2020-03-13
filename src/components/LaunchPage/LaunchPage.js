@@ -5,7 +5,46 @@ import Context from '../../context'
 //Update at_count to attendance after change in API
 
 class LaunchPage extends Component {
-    static contextType = Context
+    constructor(props) {
+        super(props);
+        this.state = {
+            stats: [],
+            data: []
+        }
+    }
+
+    componentDidMount() {
+        this.fetchStats()
+    }
+
+    fetchStats() {
+        const statsUrl = `${config.API_ENDPOINT}/stats`
+        const statsOptions = {
+          method: 'GET', 
+          headers: {
+            'Content-type': 'application/json'
+          }
+        }
+    
+        fetch(statsUrl, statsOptions)
+          .then(res => {
+            if(res.ok) {
+              return res.json()
+            }
+            else {
+              throw new Error('Something went wrong loading stats')
+            }
+          })
+          .then(data => {
+            //console.log(data)
+            this.setState({stats: data})
+          })
+          .catch(err => {
+            this.setState({
+              error: err.message
+            })
+          })
+      }
 
     getMeetId() {
         const {meet_id} = this.props.match.params
@@ -14,7 +53,7 @@ class LaunchPage extends Component {
     }
 
     renderLastMessage() {
-        const {stats = []} = this.context
+        const {stats = []} = this.state.stats
         const stat = stats
         //const {meet_id} = this.props.match.params
         //const id = parseInt(meet_id)
