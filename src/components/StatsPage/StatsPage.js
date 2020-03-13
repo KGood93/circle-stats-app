@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import Graph from '../Graph/Graph'
 import StatsTable from '../StatsTable/StatsTable'
+import Context from '../../context'
 import config from '../../config'
 import './StatsPage.css'
 
@@ -80,6 +81,7 @@ class StatsPage extends Component {
         //console.log(value)
 
         return (
+          <Context.Provider value={value}>
             <div className="StatsPage">
                 <div className="graph">
                     <Graph workingData={value}/>
@@ -88,6 +90,7 @@ class StatsPage extends Component {
                     <StatsTable workingData={value}/>
                 </div>
             </div>
+          </Context.Provider>
         )
     }
 }
