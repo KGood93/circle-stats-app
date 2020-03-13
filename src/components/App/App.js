@@ -103,7 +103,6 @@ class App extends Component {
   render() {
     const value = {
       meetups: this.state.meetups,
-      stats: this.state.stats
     }
     
     //console.log(value)
