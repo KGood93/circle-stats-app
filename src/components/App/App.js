@@ -16,6 +16,7 @@ class App extends Component {
       meetups: [],
       stats: []
     };
+    this.fetchStats = this.fetchStats.bind(this)
   }
 
   componentDidMount() {
