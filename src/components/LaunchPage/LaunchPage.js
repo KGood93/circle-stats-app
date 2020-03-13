@@ -44,7 +44,7 @@ class LaunchPage extends Component {
             return(
                 <div className="welcomeMessage">
                     <h2 className="launchHead">Your last meetup at {meetup.location} had</h2>
-                    <h2 className="launchHead">{meetup.at_count}</h2>  
+                    <h2 className="launchHead">{meetup.attendance}</h2>  
                     <h2 className="launchHead">attendees!</h2> 
                 </div>
             )

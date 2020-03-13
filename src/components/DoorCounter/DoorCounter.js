@@ -15,6 +15,9 @@ class DoorCounter extends Component {
                 value: '',
                 touched: false
             },
+            notes: {
+                value: ''
+            },
             redirect: false
         }
     }
@@ -39,7 +42,7 @@ class DoorCounter extends Component {
     handleSubmit = event => {
         event.preventDefault()
         //console.log(this.state)
-        const {location, clicks} = this.state
+        const {location, clicks, notes} = this.state
         //console.log(location)
         //console.log(clicks)
         const meetingId = this.getMeetId()
@@ -47,7 +50,8 @@ class DoorCounter extends Component {
         const meetingDetails = {
             meet_id: meetingId,
             location: location.value,
-            at_count: clicks
+            attendance: clicks,
+            notes: notes.value
         }
 
         console.log(meetingDetails)

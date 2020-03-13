@@ -16,12 +16,12 @@ class StatsTable extends Component {
 
     renderTableData() {
         return this.props.workingData.data.map((meetup, index) => {
-            const {date, location, at_count} = meetup
+            const {date, location, attendance} = meetup
             return (
                 <tr key={date}>
                     <td>{date}</td>
                     <td>{location}</td>
-                    <td>{at_count}</td>
+                    <td>{attendance}</td>
                 </tr>
             )
         })

@@ -21,9 +21,9 @@ export default class Graph extends PureComponent {
       >
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="date" />
-        <YAxis dataKey="at_count"/>
+        <YAxis dataKey="attendance"/>
         <Tooltip />
-        <Line type="monotone" dataKey="at_count" stroke="#8884d8" activeDot={{ r: 8 }} />
+        <Line type="monotone" dataKey="attendance" stroke="#8884d8" activeDot={{ r: 8 }} />
       </LineChart>
     );
   }
