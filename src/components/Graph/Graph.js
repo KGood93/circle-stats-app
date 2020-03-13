@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip} from 'recharts';
 
+//Update At_count to attendance once updated in api
+
 export default class Graph extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/xqjtetw0/';
   

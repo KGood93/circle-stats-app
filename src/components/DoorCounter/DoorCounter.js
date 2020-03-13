@@ -3,7 +3,7 @@ import StatsForm from '../StatsForm/StatsForm'
 import {Redirect} from 'react-router-dom'
 import config from '../../config'
 
-//Add meet_id capabilities
+//Update At_count to attendance once updated in api
 
 class DoorCounter extends Component {
     constructor(props) {

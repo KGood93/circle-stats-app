@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import Context from '../../context'
 
+//Update at_count to attendance after change in API
+
 class LaunchPage extends Component {
     static contextType = Context
 

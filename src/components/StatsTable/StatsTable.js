@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 
+//Update At_count to attendance once updated in api
+
 class StatsTable extends Component {
 
     renderTableHeader() {

@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import Context from '../../context'
 
+//Add note category on meetup section
 
 class MeetupList extends Component {
     static contextType = Context
@@ -17,7 +18,7 @@ class MeetupList extends Component {
                         <h2 className="meetupTitle">
                             <Link to={`/launch/${meetupDetails.meetup_id}`}>{meetupDetails.meetup_name}</Link>
                         </h2>
-                        <h4 className="meetupDate">1st Weekend of the Month</h4>
+                        <h4 className="meetupDate">{meetupDetails.meetup_note}</h4>
                 </div>
                 )
             })
