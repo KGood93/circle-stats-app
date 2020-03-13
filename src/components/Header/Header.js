@@ -10,7 +10,7 @@ export default class Header extends Component {
     return (
       <nav className='Header'>
         <h1>
-          <Link to='/' refresh="true">
+          <Link to='/' onClick={() => window.location.reload()}>
             {' '}
             Circle Time Stats
             </Link>
