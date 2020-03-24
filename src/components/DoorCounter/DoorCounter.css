@@ -36,6 +36,10 @@
     color: rgb(240, 198, 90);
 }
 
+.oopsButton:hover {
+    background-color: rgb(9, 142, 175);
+}
+
 .locationLabel {
     font-family: 'Roboto', sans-serif;
     color: rgb(12, 70, 94);
@@ -72,6 +76,10 @@
     margin-bottom: 25px;
     font-family: 'Press Start 2P', cursive;
     color: rgb(240, 198, 90);
+}
+
+.mainButton:hover {
+    background-color: rgb(9, 142, 175);
 }
 
 @media screen and (min-width: 768px) {
