@@ -4,3 +4,7 @@
     flex-direction: column;
     margin-top: 25px;
 }
+
+.graph {
+    width: 100%;
+}

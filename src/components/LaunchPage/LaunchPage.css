@@ -1,0 +1,22 @@
+.LaunchPage {
+    padding-bottom: 320px;
+}
+
+.launchHead {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(12, 70, 94);
+}
+
+.mainButton {
+    height: 40px;
+    background-color: rgb(12, 70, 94);
+    border: solid 2px rgb(246, 125, 72);
+    margin-top: 10px;
+}
+
+.mainButton a {
+    vertical-align: middle;
+    text-decoration: none;
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(240, 198, 90);
+}

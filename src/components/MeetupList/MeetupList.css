@@ -1,0 +1,18 @@
+.meetupTitle a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    color: rgb(12, 70, 94);
+}
+
+.meetupTitle a:hover {
+    color: rgb(246, 125, 72);
+}
+
+.meetupTitle a:visited {
+    color: rgb(12, 70, 94);
+}
+
+.meetupDate {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(12, 70, 94);
+}

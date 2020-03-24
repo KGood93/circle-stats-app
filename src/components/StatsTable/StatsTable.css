@@ -1,3 +1,17 @@
 .meetupStats {
     margin: auto;
 }
+
+.tableHeader {
+    font-family: 'Roboto', sans-serif;
+}
+
+.largeForm {
+    display: none;
+}
+
+@media screen and (min-width: 450px) {
+    .largeForm{
+        display: inline-block;
+    }
+}

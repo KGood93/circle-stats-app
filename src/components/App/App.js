@@ -5,6 +5,7 @@ import MeetupSelection from '../MeetupSection/MeetupSection'
 import LaunchPage from '../LaunchPage/LaunchPage'
 import DoorCounter from '../DoorCounter/DoorCounter'
 import StatsPage from '../StatsPage/StatsPage'
+import Footer from '../Footer/Footer'
 import config from '../../config'
 import Context from '../../context'
 import './App.css';
@@ -85,9 +86,7 @@ class App extends Component {
 
         <nav className="AppNav">{this.renderNavRoutes()}</nav>
 
-        <footer>
-          <p>Important Info</p>
-        </footer>
+        <Footer />
       </div>
       </Context.Provider>
     );

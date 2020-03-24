@@ -1,0 +1,59 @@
+.inputLabel, .countLabel, .noteLabel {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(12, 70, 94);
+}
+
+.activeCount {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    color: rgb(12, 70, 94);
+}
+
+.addButton {
+    height: 150px;
+    width: 150px;
+    border-radius: 75px;
+    font-size: 90px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(240, 198, 90);
+    border: solid 3px rgb(12, 70, 94);
+    background-color: rgb(9, 142, 175);
+}
+
+.locationLabel {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(12, 70, 94);
+    margin-bottom: 0px;
+}
+
+.location {
+    height: 30px;
+    width: 275px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    border: solid 2px rgb(12, 70, 94);
+}
+
+.noteLabel {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(12, 70, 94);
+    margin-bottom: 0px;
+}
+
+.noteContent {
+    width: 275px;
+    margin-top: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    border: solid 2px rgb(12, 70, 94);
+}
+
+.mainButton {
+    height: 40px;
+    background-color: rgb(12, 70, 94);
+    border: solid 2px rgb(246, 125, 72);
+    margin-top: 10px;
+    margin-bottom: 25px;
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(240, 198, 90);
+}

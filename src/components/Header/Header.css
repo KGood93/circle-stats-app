@@ -1,12 +1,17 @@
 .Header {
-    height: 40px;
+    height: 60px;
+    margin: 0px;
     display: flex;
-    align-items: normal;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(12, 70, 94);
   }
   
   .Header h1 {
-    margin: 0;
+    margin: auto;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 18pt;
   }
   
   .Header h1 a {
@@ -14,16 +19,7 @@
   }
   
   .Header a {
-    color: #444;
-  }
-  
-  .Header_not-logged-in {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .Header_not-logged-in .Hyph {
-    display: none;
+    color: rgb(246, 125, 72);
   }
   
   @media screen and (min-width: 450px) {
@@ -32,13 +28,5 @@
     }
     .Header h1 {
       font-size: 22pt;
-    }
-  
-    .Header__not-logged-in {
-      flex-direction: row;
-    }
-  
-    .Header__not-logged-in .Hyph {
-      display: initial;
     }
   }

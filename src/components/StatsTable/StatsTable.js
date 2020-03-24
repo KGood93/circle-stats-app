@@ -1,27 +1,29 @@
 import React, {Component} from 'react'
-
-//Update At_count to attendance once updated in api
+import moment from 'moment'
+import './StatsTable.css'
 
 class StatsTable extends Component {
 
     renderTableHeader() {
         return (
-            <tr>
+            <tr className="columnHeader">
                 <th>Date</th>
                 <th>Location</th>
                 <th>Attendees</th>
+                <th className="largeForm">Notes</th>
             </tr>
         )
     }
 
     renderTableData() {
         return this.props.workingData.data.map((meetup, index) => {
-            const {date, location, attendance} = meetup
+            const {date, location, attendance, notes} = meetup
             return (
                 <tr key={date}>
-                    <td>{date}</td>
+                    <td>{moment(date).format('YYYY-MM-DD')}</td>
                     <td>{location}</td>
                     <td>{attendance}</td>
+                    <td className="largeForm">{notes}</td>
                 </tr>
             )
         })
@@ -30,7 +32,7 @@ class StatsTable extends Component {
     render() {
         return (
             <div className="StatsTable">
-                <h3>Meetup Stats</h3>
+                <h3 className="tableHeader">Meetup Stats</h3>
                 <table id='meetupStats'>
                     <tbody>
                         {this.renderTableHeader()}

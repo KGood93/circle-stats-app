@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import config from '../../config'
+import './LaunchPage.css'
 
 class LaunchPage extends Component {
     constructor(props) {

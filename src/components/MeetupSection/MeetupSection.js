@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import MeetupList from '../MeetupList/MeetupList'
+import './MeetupSection.css'
 //import {Link} from 'react-router-dom'
 //import LaunchPage from '../LaunchPage/LaunchPage'
 

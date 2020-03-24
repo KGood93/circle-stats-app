@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import Context from '../../context'
+import './MeetupList.css'
 
 //Add note category on meetup section
 
