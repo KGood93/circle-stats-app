@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import StatsForm from '../StatsForm/StatsForm'
 import {Redirect} from 'react-router-dom'
 import config from '../../config'
+import ValidationError from '../ValidationError/ValidationError'
 import './DoorCounter.css'
 
 //Update At_count to attendance once updated in api
@@ -43,7 +44,16 @@ class DoorCounter extends Component {
         this.setState({clicks: this.state.clicks + 1})
     }
 
+    decrementCount = () => {
+        this.setState({clicks: this.state.clicks - 1})
+    }
 
+    validateLocation() {
+        const location = this.state.location.value.trim();
+        if(location.length === 0) {
+            return "Location is Required"
+        }
+    }
 
     handleSubmit = event => {
         event.preventDefault()
@@ -78,6 +88,8 @@ class DoorCounter extends Component {
     }
 
     render() {
+        const locationError = this.validateLocation()
+
         return (
             <div className="doorCounter">
                 <StatsForm className="meeting" onSubmit={this.handleSubmit}>
@@ -92,6 +104,13 @@ class DoorCounter extends Component {
                             >
                                 +
                             </button>
+                            <button 
+                                type="button"
+                                className="oopsButton"
+                                onClick={this.decrementCount}
+                            >
+                                Oops
+                            </button>
                         </div>
                     </div>    
                         
@@ -102,6 +121,7 @@ class DoorCounter extends Component {
                             className="location" 
                             onChange={e => this.updateLocation(e.target.value)}
                         />
+                        {this.state.location.touched && <ValidationError message={locationError} />}
                     </div>
 
                     <div className="notes">
@@ -114,7 +134,13 @@ class DoorCounter extends Component {
                     </div>
 
                     <div className="next">
-                        <button type="submit" className="mainButton">Next</button>
+                        <button 
+                            type="submit" 
+                            disabled = {this.validateLocation()}
+                            className="mainButton"
+                        >
+                            Next
+                        </button>
                     </div>
                 </StatsForm>
                 {this.state.redirect && <Redirect to={`/stats/${this.getMeetId()}`}/>}

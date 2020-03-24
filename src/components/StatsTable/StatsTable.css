@@ -13,27 +13,58 @@
 }
 
 table {
+    display: block;
     border-collapse: collapse;
+    font-family: 'Roboto', sans-serif;
 }
 
-table, th, td {
-    font-family: 'Roboto', sans-serif;
+.dataBody {
     border: 1px solid rgb(12, 70, 94);
     padding: 3px;
 }
 
-th {
-    border: 1px solid rgb(230, 248, 255);
+.all {
+    border-right: 1px solid rgb(12, 70, 94);
+    padding: 3px;
+}
+
+.allHead {
+    border-right: 1px solid rgb(230, 248, 255);
     background-color: rgb(12, 70, 94);
     color: rgb(230, 248, 255);
+    padding: 3px;
+}
+
+.allHead2 {
+    background-color: rgb(12, 70, 94);
+    color: rgb(230, 248, 255);
+    padding: 3px;
 }
 
 .largeForm {
     display: none;
 }
 
+.largeFormHead {
+    display: none;
+}
+
 @media screen and (min-width: 450px) {
     .largeForm{
-        display: inline-block;
+        display: block;
+        padding: 3px;
     }
+
+    .largeFormHead {
+        display: block;
+        border: 2px solid rgb(12, 70, 94);
+        background-color: rgb(12, 70, 94);
+        color: rgb(230, 248, 255);
+    }
+
+    .allHead2 {
+        border-right: 1px solid rgb(230, 248, 255);
+    }
+
 }
+

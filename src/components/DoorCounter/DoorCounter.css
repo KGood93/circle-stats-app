@@ -9,6 +9,12 @@
     color: rgb(12, 70, 94);
 }
 
+.doorButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .addButton {
     height: 150px;
     width: 150px;
@@ -18,6 +24,16 @@
     color: rgb(240, 198, 90);
     border: solid 3px rgb(12, 70, 94);
     background-color: rgb(9, 142, 175);
+}
+
+.oopsButton {
+    width: 75px;
+    height: 40px;
+    margin-top: 15px;
+    background-color: rgb(12, 70, 94);
+    border: solid 2px rgb(246, 125, 72);
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(240, 198, 90);
 }
 
 .locationLabel {
@@ -56,4 +72,14 @@
     margin-bottom: 25px;
     font-family: 'Press Start 2P', cursive;
     color: rgb(240, 198, 90);
+}
+
+@media screen and (min-width: 768px) {
+    .location {
+        width: 350px;
+    }
+
+    .noteContent {
+        width: 350px;
+    }
 }

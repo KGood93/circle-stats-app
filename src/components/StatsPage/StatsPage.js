@@ -84,7 +84,6 @@ class StatsPage extends Component {
         const value = {
             data: this.state.data
         }
-
         //console.log(value)
 
         return (

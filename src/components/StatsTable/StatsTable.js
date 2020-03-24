@@ -6,10 +6,10 @@ class StatsTable extends Component {
     renderTableHeader() {
         return (
             <tr className="columnHeader">
-                <th>Date</th>
-                <th>Location</th>
-                <th>Attendees</th>
-                <th className="largeForm">Notes</th>
+                <th className="allHead">Date</th>
+                <th className="allHead">Location</th>
+                <th className="allHead2">Attendees</th>
+                <th className="largeFormHead">Notes</th>
             </tr>
         )
     }
@@ -18,10 +18,10 @@ class StatsTable extends Component {
         return this.props.workingData.data.map((meetup, index) => {
             const {date, location, attendance, notes} = meetup
             return (
-                <tr key={date}>
-                    <td>{date}</td>
-                    <td>{location}</td>
-                    <td>{attendance}</td>
+                <tr key={date} className="dataBody">
+                    <td className="all">{date}</td>
+                    <td className="all">{location}</td>
+                    <td className="all">{attendance}</td>
                     <td className="largeForm">{notes}</td>
                 </tr>
             )
