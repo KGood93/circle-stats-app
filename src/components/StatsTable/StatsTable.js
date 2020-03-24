@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import moment from 'moment'
 import './StatsTable.css'
 
 class StatsTable extends Component {
@@ -20,7 +19,7 @@ class StatsTable extends Component {
             const {date, location, attendance, notes} = meetup
             return (
                 <tr key={date}>
-                    <td>{moment(date).format('YYYY-MM-DD')}</td>
+                    <td>{date}</td>
                     <td>{location}</td>
                     <td>{attendance}</td>
                     <td className="largeForm">{notes}</td>
@@ -33,7 +32,7 @@ class StatsTable extends Component {
         return (
             <div className="StatsTable">
                 <h3 className="tableHeader">Meetup Stats</h3>
-                <table id='meetupStats'>
+                <table className='meetupStats'>
                     <tbody>
                         {this.renderTableHeader()}
                         {this.renderTableData()}

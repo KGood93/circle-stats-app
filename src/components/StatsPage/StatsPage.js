@@ -3,6 +3,7 @@ import Graph from '../Graph/Graph'
 import StatsTable from '../StatsTable/StatsTable'
 import Context from '../../context'
 import config from '../../config'
+import moment from 'moment'
 import './StatsPage.css'
 
 class StatsPage extends Component {
@@ -22,7 +23,7 @@ class StatsPage extends Component {
       const {meet_id} = this.props.match.params
       const id = parseInt(meet_id)
       return id
-  }
+    }
 
     fetchStats() {
         const statsUrl = `${config.API_ENDPOINT}/stats`
@@ -55,21 +56,27 @@ class StatsPage extends Component {
       }
 
       renderData() {
-        //const {stats=[]} = this.state.stats
-        //console.log(this.state.stats)
         const newData = this.state.stats
         const meetupId = this.getMeetId()
 
-        //console.log(newData)
+        //console.log("newData", newData)
         const meetStat = []
 
         for(var i = 0; i < newData.length; i++){
             if(newData[i].meet_id === meetupId) {
-                meetStat.push(newData[i])
+                //console.log("InData", newData[i])
+                const formData = {
+                  date: moment(newData[i].date).format('YYYY-MM-DD'),
+                  location: newData[i].location,
+                  attendance: newData[i].attendance,
+                  notes: newData[i].notes,
+                }
+                //console.log("formData", formData)
+                meetStat.push(formData)
             }
         }
 
-        //console.log(meetStat)
+        //console.log("meetStat", meetStat)
         this.setState({data: meetStat})
       }
 
