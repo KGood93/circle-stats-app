@@ -1,9 +1,12 @@
 .MeetupSection {
-    margin-bottom: 285px;
+    margin-bottom: 75px;
 }
 
 .appDescription {
+    width: 275px;
+    padding: 5px;
+    border: solid 2px rgb(12, 70, 94);
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    border: solid 2px rgb(12, 70, 94);
+
 }
