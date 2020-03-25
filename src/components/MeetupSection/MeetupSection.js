@@ -12,14 +12,8 @@ class MeetupSelection extends Component {
         };
       }
 
-    pageReload() {
-        if(this.state.refresh === false) {
-            this.setState({refresh: true})
-        }
-    }
 
     render() {
-        this.pageReload()
         return (
             <div className="MeetupSection">
                 <MeetupList />
