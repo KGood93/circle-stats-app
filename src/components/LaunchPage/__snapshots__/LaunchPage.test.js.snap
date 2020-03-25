@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LaunchPage Component renders without crashing 1`] = `
+<div
+  className="LaunchPage"
+>
+  <div
+    className="welcomeMessage"
+  >
+    <h2
+      className="launchHead"
+    >
+      This is your first meetup!
+    </h2>
+  </div>
+  <div
+    className="launchButtons"
+  >
+    <button
+      className="mainButton"
+      type="button"
+    >
+      <Link
+        to="/doorCount/1"
+      >
+        Create New
+      </Link>
+    </button>
+    <br />
+    <button
+      className="mainButton"
+      type="button"
+    >
+      <Link
+        to="/stats/1"
+      >
+        View Stats
+      </Link>
+    </button>
+  </div>
+</div>
+`;

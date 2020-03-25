@@ -46,9 +46,6 @@ class LaunchPage extends Component {
 
     getMeetId() {
         const {meet_id} = this.props.match.params
-        console.log(meet_id)
-        console.log(this.props.match.params)
-        console.log(this.props.match)
         const id = parseInt(meet_id)
         return id
     }
