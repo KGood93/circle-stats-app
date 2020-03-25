@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DoorCounter Component renders without crashing 1`] = `
+<div
+  className="doorCounter"
+>
+  <StatsForm
+    className="meeting"
+    onSubmit={[Function]}
+  >
+    <div
+      className="count"
+    >
+      <h2
+        className="countLabel"
+      >
+        Number of Attendees
+      </h2>
+      <h2
+        className="activeCount"
+      >
+        0
+      </h2>
+      <div
+        className="doorButtons"
+      >
+        <button
+          className="addButton"
+          onClick={[Function]}
+          type="button"
+        >
+          +
+        </button>
+        <button
+          className="oopsButton"
+          onClick={[Function]}
+          type="button"
+        >
+          Oops
+        </button>
+      </div>
+    </div>
+    <div
+      className="newLocation"
+    >
+      <h2
+        className="locationLabel"
+      >
+        Location
+      </h2>
+      <input
+        className="location"
+        onChange={[Function]}
+        type="text"
+      />
+    </div>
+    <div
+      className="notes"
+    >
+      <h2
+        className="noteLabel"
+      >
+        Notes
+      </h2>
+      <textarea
+        className="noteContent"
+        onChange={[Function]}
+      />
+    </div>
+    <div
+      className="next"
+    >
+      <button
+        className="mainButton"
+        disabled="Location is Required"
+        type="submit"
+      >
+        Next
+      </button>
+    </div>
+  </StatsForm>
+</div>
+`;
