@@ -1,6 +1,7 @@
 .MeetupSection {
     margin-bottom: 75px;
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -11,4 +12,10 @@
     border: solid 2px rgb(12, 70, 94);
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
+}
+
+@media screen and (min-width: 420px) {
+    .appDescription {
+        width: 400px;
+    }
 }
