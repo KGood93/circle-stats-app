@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StatsPage Component renders without crashing 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "data": Array [],
+    }
+  }
+>
+  <div
+    className="StatsPage"
+  >
+    <div
+      className="graph"
+    >
+      <Graph
+        workingData={
+          Object {
+            "data": Array [],
+          }
+        }
+      />
+    </div>
+    <div
+      className="textStats"
+    >
+      <StatsTable
+        workingData={
+          Object {
+            "data": Array [],
+          }
+        }
+      />
+    </div>
+  </div>
+</ContextProvider>
+`;
