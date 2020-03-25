@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StatsTable Component renders without crashing 1`] = `
+<div
+  className="StatsTable"
+>
+  <h3
+    className="tableHeader"
+  >
+    Meetup Stats
+  </h3>
+  <table
+    className="meetupStats"
+  >
+    <tbody>
+      <tr
+        className="columnHeader"
+      >
+        <th
+          className="allHead"
+        >
+          Date
+        </th>
+        <th
+          className="allHead"
+        >
+          Location
+        </th>
+        <th
+          className="allHead2"
+        >
+          Attendees
+        </th>
+        <th
+          className="largeFormHead"
+        >
+          Notes
+        </th>
+      </tr>
+      <tr
+        className="dataBody"
+        key="2019-12-25"
+      >
+        <td
+          className="all"
+        >
+          2019-12-25
+        </td>
+        <td
+          className="all"
+        >
+          Parents House
+        </td>
+        <td
+          className="all"
+        >
+          24
+        </td>
+        <td
+          className="largeForm"
+        >
+          Christmas
+        </td>
+      </tr>
+      <tr
+        className="dataBody"
+        key="2019-11-28"
+      >
+        <td
+          className="all"
+        >
+          2019-11-28
+        </td>
+        <td
+          className="all"
+        >
+          London
+        </td>
+        <td
+          className="all"
+        >
+          12
+        </td>
+        <td
+          className="largeForm"
+        >
+          Thanksgiving
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

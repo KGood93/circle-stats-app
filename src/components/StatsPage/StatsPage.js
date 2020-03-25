@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import Graph from '../Graph/Graph'
 import StatsTable from '../StatsTable/StatsTable'
-import Context from '../../context'
 import config from '../../config'
 import moment from 'moment'
 import './StatsPage.css'
@@ -84,19 +83,17 @@ class StatsPage extends Component {
         const value = {
             data: this.state.data
         }
-        console.log(value)
+        //console.log(value)
 
         return (
-          <Context.Provider value={value}>
-            <div className="StatsPage">
-                <div className="graph">
-                    <Graph workingData={value}/>
-                </div>
-                <div className="textStats">
-                    <StatsTable workingData={value}/>
-                </div>
-            </div>
-          </Context.Provider>
+          <div className="StatsPage">
+              <div className="graph">
+                  <Graph workingData={value}/>
+              </div>
+              <div className="textStats">
+                  <StatsTable workingData={value}/>
+              </div>
+          </div>
         )
     }
 }

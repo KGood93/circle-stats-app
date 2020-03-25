@@ -5,7 +5,7 @@ import StatsTable from './StatsTable';
 
 describe('StatsTable Component', () => {
     it(`renders without crashing`, () => {
-        const data = [
+        const value = {data: [
             {
                 date: '2019-12-25',
                 location: 'Parents House',
@@ -18,8 +18,8 @@ describe('StatsTable Component', () => {
                 attendance: 12,
                 notes: 'Thanksgiving',
             },
-        ]
-        const wrapper = shallow(<StatsTable workingData={data}/>);
+        ]}
+        const wrapper = shallow(<StatsTable workingData={value}/>);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });
