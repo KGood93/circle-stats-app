@@ -7,5 +7,7 @@
 
 body {
   background-color: rgb(230, 248, 255);
+  position: relative;
+  padding-bottom: 40px;
 }
 
